@@ -39,6 +39,8 @@ $terraform apply
 
 Enter a value: yes
 
+terraform.tf.state will be created in JSON format 
+
 Completed 
 
 
