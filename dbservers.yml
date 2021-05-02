@@ -1,0 +1,37 @@
+# Createing a replicaset called 'replica0' with the 3 provided members
+- name: Ensure replicaset replica0 exists
+  mongodb_replicaset:
+    login_host: localhost
+    login_user: admin
+    login_password: root
+    replica_set: replica0
+    arbiter_at_index:2
+    election_timeout_secs:12000
+    members:
+    - mongodb1:27017
+    - mongodb2:27018
+    - mongodb3:27019
+  when: groups.mongod.index(inventory_hostname) == 0
+ 
+# Creating two single-node replicasets on the localhost for testing
+- name: Ensure replicaset replica0 exists
+  mongodb_replicaset:
+    login_host: localhost
+    login_port: 3001
+    login_user: admin
+    login_password: root
+    login_database: admin
+    replica_set: replica0
+    members: localhost:3000
+    validate: yes
+ 
+- name: Ensure replicaset replica1 exists
+  mongodb_replicaset:
+    login_host: localhost
+    login_port: 3002
+    login_user: admin
+    login_password: secret
+    login_database: root
+    replica_set: replica1
+    members: localhost:3001
+    validate: yes

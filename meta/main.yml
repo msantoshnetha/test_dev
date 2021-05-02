@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Santosh Kumar Myakala
+  description: Ansible role to install/configure an NGINX load balancer for HTTP/HTTPS/TCP/UDP
+
+  license: MIT
+
+  min_ansible_version: 2.5
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+        - trusty
+        - xenial
+        - zesty
+
+  galaxy_tags:
+    - loadbalancing
+
+dependencies: []

@@ -1,0 +1,4 @@
+---
+application: ansible_frkf_key
+instance_count: 7
+

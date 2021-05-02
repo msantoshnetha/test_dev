@@ -1,0 +1,17 @@
+---
+- name: ubuntu | Adding NGINX PPA
+  apt_repository:
+    repo: "{{ 'ppa:nginx/' + nginx_load_balancer_version }}"
+    state: present
+  become: true
+  register: result
+  until: result is successful
+
+- name: ubuntu | Installing NGINX
+  apt:
+    name: nginx
+    state: present
+  become: true
+  register: result
+  until: result is successful
+
