@@ -22,3 +22,23 @@
 All infrastructure deployed with Terraform and AWS cloud platform
 
 ![image](https://user-images.githubusercontent.com/54053423/116818133-5af6f200-ab87-11eb-81b7-46b8ffe31b05.png)
+
+Command used to run the services 
+
+Enter into terraform afetr connecting into VPN server 
+
+Keep all the files fromm git hub and execute below commands it will run "main.tf"
+
+$ cd terraform
+
+$terraform init  (intitalize backend)
+
+$terraform plan  (Preliminary check it create resource using aws cloud and prepare setup to run, Plan: 1 to add should be expect at the end )
+
+$terraform apply 
+
+Enter a value: yes
+
+Completed 
+
+
