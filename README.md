@@ -2,6 +2,7 @@
 
 
 1 VPN Server setup in frankfurt Location 
+
 2 Application Load Balancer
 - NGINX server
 - Ubuntu server with installed nginx
