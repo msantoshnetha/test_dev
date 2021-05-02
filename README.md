@@ -39,8 +39,10 @@ $terraform apply
 
 Enter a value: yes
 
-terraform.tf.state will be created in JSON format 
+terraform.tf.state we can be create in JSON format using $ terraform show -json > tfstate.json 
 
 Completed 
+
+check the inventary with all serveers by running $ terraform-inventory -inventory tfstate.json
 
 
